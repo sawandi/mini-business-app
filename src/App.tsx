@@ -33,6 +33,11 @@ function App() {
         placeholder="Enter your name"
         value={name}
         onChange={(event) => setName(event.target.value)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            handleWelcome()
+          }
+        }}
       />
 
       <button onClick={handleWelcome}>Welcome Me</button>
